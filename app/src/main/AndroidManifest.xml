@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.CAMERA"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Collaborators"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activites.DetailEventUpcomingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.EventanalyzedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.ListUpcomingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".Activites.AccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.RegisterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activites.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.qrcode.CaptureAct"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+    </application>
+
+</manifest>

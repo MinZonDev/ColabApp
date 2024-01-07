@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ImageButton
+        android:id="@+id/btnAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="70dp"
+        android:contentDescription="avatar"
+        android:src="@drawable/zon" />
+
+    <Button
+        android:id="@+id/btnDoiAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnAvatar"
+        android:layout_marginStart="105dp"
+        android:background="@drawable/custom_btn"
+        android:drawableLeft="@drawable/ic_cammera"
+        android:text="Đổi Ảnh Đại diện"
+        android:textColor="@color/black"
+        app:backgroundTint="@null" />
+    <TextView
+        android:id="@+id/txtNameUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDoiAvatar"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Phạm Minh Trọng" />
+
+    <TextView
+        android:id="@+id/txtMSSV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNameUser"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="2011060119" />
+
+    <TextView
+        android:id="@+id/txtSDT"
+        android:layout_below="@+id/txtMSSV"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="0822507636" />
+
+    <Button
+        android:id="@+id/btnSua1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMSSV"
+        android:layout_toEndOf="@+id/txtSDT"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="142dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:background="@drawable/custom_btn"
+        android:text="Sửa"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:id="@+id/txtGmail"
+        android:layout_below="@+id/txtSDT"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="trongpro0307@gmail.com" />
+
+    <Button
+        android:id="@+id/btnSua2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSua1"
+        android:layout_toEndOf="@+id/txtGmail"
+        android:layout_marginTop="29dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:background="@drawable/custom_btn"
+        android:text="Sửa"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:id="@+id/btnDoiPassword"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtGmail"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/custom_btn"
+        android:backgroundTint="@color/sea_blue"
+        android:drawableLeft="@drawable/ic_password"
+        android:text="Đổi mật khẩu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDoiPassword"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_btn"
+        android:backgroundTint="@color/red"
+        android:drawableLeft="@drawable/ic_logout"
+        android:textSize="20sp"
+        android:text="Đăng xuất"
+        android:textColor="@color/black"
+        app:backgroundTint="@null" />
+
+
+
+    <Button
+        android:id="@+id/btnLuu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/custom_btn"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Lưu"
+        app:backgroundTint="@null" />
+
+
+</RelativeLayout>

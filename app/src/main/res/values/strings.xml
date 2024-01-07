@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Collaborators</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="qu_n_m_t_kh_u">Quên mật khẩu</string>
+    <string name="b_n_h_y_nh_p_email_i_l_i_m_t_kh_u">Bạn hãy nhập Email để đổi lại mật khẩu</string>
+    <string name="email">Email</string>
+    <string name="quay_l_i">Quay lại</string>
+    <string name="ng_nh_p">Đăng nhập</string>
+    <string name="m_t_kh_u">Mật khẩu</string>
+    <string name="b_n_c_t_i_kho_n_ch_a">Bạn đã có tài khoản chưa?</string>
+    <string name="ng_k">Đăng ký</string>
+    <string name="t_n_ng_nh_p">Tên đăng nhập</string>
+    <string name="x_c_nh_n_m_t_kh_u">Xác nhận mật khẩu</string>
+    <string name="b_n_c_t_i_kho_n">Bạn đã có tài khoản</string>
+    <string name="title_activity_bottom_menu">BottomMenuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="account">Account</string>
+    <string name="qrcode">QrCode</string>
+    <string name="back">Back</string>
+</resources>

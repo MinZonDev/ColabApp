@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logoBanner"
+            android:layout_width="220dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_banner" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Tri thức - Đạo Đức - Sáng Tạo"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSuKienDuocPhanCong"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="44dp"
+        android:layout_below="@id/header"
+        android:background="@drawable/custom_btn"
+        android:backgroundTint="@color/sea_blue"
+        android:drawableLeft="@drawable/ic_check"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Sự kiện được phân công"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:id="@+id/btnSuKienSapDienRa"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSuKienDuocPhanCong"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/custom_btn"
+        android:backgroundTint="@color/yellow"
+        android:drawableLeft="@drawable/ic_time"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Sự kiện sắp diễn ra"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@null" />
+
+
+
+
+</RelativeLayout>
