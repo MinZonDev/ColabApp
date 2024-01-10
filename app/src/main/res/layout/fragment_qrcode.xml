@@ -5,13 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:src="@drawable/ic_app_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"/>
 
     <ImageView
         android:id="@+id/imgQR"
         android:layout_width="308dp"
         android:layout_height="307dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginStart="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:src="@drawable/qr" />
 
     <TextView
@@ -19,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgQR"
-        android:layout_marginStart="140dp"
+        android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="Mã QR của tôi" />
@@ -29,13 +35,13 @@
         android:layout_width="208dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtMaQr"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/custom_btn"
         android:contentDescription="Quét QR"
         android:drawableLeft="@drawable/ic_scan"
         android:text="Quét mã QR"
         android:textStyle="bold"
+        android:layout_centerHorizontal="true"
         android:textSize="17sp"
         android:textColor="@color/black"
         app:backgroundTint="@null"

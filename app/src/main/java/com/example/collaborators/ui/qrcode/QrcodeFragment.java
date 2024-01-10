@@ -19,12 +19,20 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.collaborators.R;
-import com.example.collaborators.databinding.FragmentQrcodeBinding;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
+import android.util.Log;
 
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Properties;
 
 public class QrcodeFragment extends Fragment {
 
@@ -75,7 +83,10 @@ public class QrcodeFragment extends Fragment {
                     if (task.isSuccessful() && task.getResult() != null) {
                         for (DocumentSnapshot document : task.getResult()) {
                             document.getReference().update("status", 2)
-                                    .addOnSuccessListener(aVoid -> showStatusUpdateSuccessDialog())
+                                    .addOnSuccessListener(aVoid -> {
+                                       showStatusUpdateSuccessDialog();
+                                       sendCheckInNotification(document.getString("userId"));
+                                    })
                                     .addOnFailureListener(e -> showStatusUpdateFailedDialog());
                         }
                     } else {
@@ -84,18 +95,96 @@ public class QrcodeFragment extends Fragment {
                 });
     }
 
+    private void sendCheckInNotification(String userId) {
+        // Fetch user's email using userId
+        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+        firestore.collection("users")
+                .document(userId)
+                .get()
+                .addOnCompleteListener(userTask -> {
+                    if (userTask.isSuccessful() && userTask.getResult() != null) {
+                        String userEmail = userTask.getResult().getString("email");
+//                        String userEmail = "trongpro0307@gmail.com";
+//                        sendEmailNotification(userEmail);
+                    } else {
+                        // Handle the case when user information is not found
+                    }
+                });
+    }
+
+//    private void sendEmailNotification(String userEmail) {
+//        final String username = "phamminzon@gmail.com";
+//        final String password = "mt03072002";
+//
+//        Properties props = new Properties();
+//        props.put("mail.smtp.auth", "true");
+//        props.put("mail.smtp.starttls.enable", "true");
+//        props.put("mail.smtp.host", "smtp.gmail.com");
+//        props.put("mail.smtp.port", "587");
+//
+//        Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+//            protected PasswordAuthentication getPasswordAuthentication() {
+//                return new PasswordAuthentication(username, password);
+//            }
+//        });
+//
+//        try {
+//            Message message = new MimeMessage(session);
+//            message.setFrom(new InternetAddress(username));
+//            message.setRecipients(Message.RecipientType.TO,
+//                    InternetAddress.parse(userEmail));
+//            message.setSubject("Check-in Successful");
+//            message.setText("Dear User,\n\nYou have successfully checked in to the event.");
+//
+//            Transport.send(message);
+//
+//            Log.i("Email", "Email sent successfully");
+//
+//        } catch (MessagingException e) {
+//            Log.e("Email", "Error sending email", e);
+//        }
+//    }
+
     private void showStatusUpdateSuccessDialog() {
-        // Display a dialog indicating a successful status update
-        // You can customize this based on your UI requirements
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        builder.setTitle("Success");
+        builder.setMessage("Status updated successfully");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // You can perform additional actions if needed
+                dialog.dismiss();
+            }
+        });
+        builder.show();
     }
 
     private void showStatusUpdateFailedDialog() {
-        // Display a dialog indicating a failed status update
-        // You can customize this based on your UI requirements
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        builder.setTitle("Error");
+        builder.setMessage("Failed to update status");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // You can perform additional actions if needed
+                dialog.dismiss();
+            }
+        });
+        builder.show();
     }
 
     private void showNoMatchingEventDialog() {
-        // Display a dialog indicating that no matching registeredEvent was found
-        // You can customize this based on your UI requirements
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        builder.setTitle("No Matching Event");
+        builder.setMessage("No registered event found with the scanned QR code");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // You can perform additional actions if needed
+                dialog.dismiss();
+            }
+        });
+        builder.show();
     }
+
 }

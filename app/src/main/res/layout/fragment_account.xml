@@ -6,14 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-
-    <ImageButton
+    <ImageView
         android:id="@+id/btnAvatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:contentDescription="avatar"
         android:src="@drawable/zon" />
 
@@ -22,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_below="@+id/btnAvatar"
-        android:layout_marginStart="105dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/custom_btn"
         android:drawableLeft="@drawable/ic_cammera"
         android:text="Đổi Ảnh Đại diện"
@@ -33,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnDoiAvatar"
-        android:layout_marginStart="130dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -44,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtNameUser"
-        android:layout_marginStart="150dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -53,8 +51,8 @@
     <TextView
         android:id="@+id/txtSDT"
         android:layout_below="@+id/txtMSSV"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -66,10 +64,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtMSSV"
-        android:layout_toEndOf="@+id/txtSDT"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="142dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="19dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/teal_700"
         android:textSize="20sp"
         android:background="@drawable/custom_btn"
         android:text="Sửa"
@@ -78,8 +75,8 @@
     <TextView
         android:id="@+id/txtGmail"
         android:layout_below="@+id/txtSDT"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -88,26 +85,13 @@
         android:ellipsize="end"
         android:text="trongpro0307@gmail.com" />
 
-    <Button
-        android:id="@+id/btnSua2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnSua1"
-        android:layout_toEndOf="@+id/txtGmail"
-        android:layout_marginTop="29dp"
-        android:layout_marginStart="20dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:background="@drawable/custom_btn"
-        android:text="Sửa"
-        app:backgroundTint="@null" />
 
     <Button
         android:id="@+id/btnDoiPassword"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtGmail"
-        android:layout_marginStart="22dp"
+        android:layout_marginHorizontal="20sp"
         android:layout_marginTop="31dp"
         android:background="@drawable/custom_btn"
         android:backgroundTint="@color/sea_blue"
@@ -122,7 +106,9 @@
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnDoiPassword"
-        android:layout_marginStart="22dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20sp"
+        android:layout_marginHorizontal="20sp"
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_btn"
         android:backgroundTint="@color/red"
@@ -132,19 +118,6 @@
         android:textColor="@color/black"
         app:backgroundTint="@null" />
 
-
-
-    <Button
-        android:id="@+id/btnLuu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/custom_btn"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="Lưu"
-        app:backgroundTint="@null" />
 
 
 </RelativeLayout>
